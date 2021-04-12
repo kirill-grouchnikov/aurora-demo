@@ -23,6 +23,7 @@ dependencies {
     implementation("org.pushing-pixels:aurora-component:0.0.23-SNAPSHOT")
     implementation("org.pushing-pixels:aurora-window:0.0.23-SNAPSHOT")
     implementation(compose.desktop.currentOs)
+    implementation("org.pushing-pixels:radiance-substance:4.0-SNAPSHOT")
 }
 
 tasks.withType<KotlinCompile>() {
@@ -31,7 +32,7 @@ tasks.withType<KotlinCompile>() {
 
 compose.desktop {
     application {
-        mainClass = "org.pushingpixels.aurora.demo.HelloWorldKt"
+        mainClass = "org.pushingpixels.aurora.demo.HelloSwingKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "aurora-demo"
