@@ -56,18 +56,16 @@ fun main() = AuroraWindow(
 ) {
     var text by remember { mutableStateOf("Hello, World!") }
 
-    AuroraDecorationArea(decorationAreaType = DecorationAreaType.NONE) {
-        Row(
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxSize().auroraBackground()
-        ) {
-            AuroraCommandButton(
-                command = Command(
-                    text = text,
-                    action = { text = "Hello, Desktop!" }
-                )
+    Row(
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxSize().auroraBackground()
+    ) {
+        AuroraCommandButton(
+            command = Command(
+                text = text,
+                action = { text = "Hello, Desktop!" }
             )
-        }
+        )
     }
 }

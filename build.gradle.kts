@@ -17,10 +17,10 @@ repositories {
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-skin:0.0.27-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-icon-icon:0.0.27-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-component:0.0.27-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-window:0.0.27-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-skin:0.0.30-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-icon-icon:0.0.30-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-component:0.0.30-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-window:0.0.30-SNAPSHOT")
     implementation(compose.desktop.currentOs)
     implementation("org.pushing-pixels:radiance-substance:4.0-SNAPSHOT")
 }

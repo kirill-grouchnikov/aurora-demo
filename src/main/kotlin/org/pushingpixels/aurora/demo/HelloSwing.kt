@@ -70,22 +70,21 @@ fun main() {
         var text by remember { mutableStateOf("Hello, World!") }
 
         Column(modifier = Modifier.fillMaxSize()) {
-            // This is native Compose content
-            AuroraDecorationArea(decorationAreaType = DecorationAreaType.NONE) {
-                Row(
-                    modifier = Modifier.fillMaxWidth().auroraBackground().padding(12.dp),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    AuroraCommandButton(
-                        command = Command(
-                            text = text,
-                            action = { text = "Hello, Desktop!" }
-                        )
+            // This is native Compose content rendered by Aurora
+            Row(
+                modifier = Modifier.fillMaxWidth().auroraBackground().padding(12.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                AuroraCommandButton(
+                    command = Command(
+                        text = text,
+                        action = { text = "Hello, Desktop!" }
                     )
-                }
+                )
             }
 
+            // This is Swing content rendered by Substance look-and-feel
             SwingPanel(
                 modifier = Modifier.fillMaxWidth().height(90.dp),
                 factory = {
