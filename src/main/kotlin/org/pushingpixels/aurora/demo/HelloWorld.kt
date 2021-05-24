@@ -40,12 +40,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.IntSize
-import org.pushingpixels.aurora.DecorationAreaType
 import org.pushingpixels.aurora.auroraBackground
-import org.pushingpixels.aurora.component.AuroraCommandButton
 import org.pushingpixels.aurora.component.model.Command
+import org.pushingpixels.aurora.component.model.CommandButtonProjection
 import org.pushingpixels.aurora.skin.marinerSkin
-import org.pushingpixels.aurora.window.AuroraDecorationArea
 import org.pushingpixels.aurora.window.AuroraWindow
 
 fun main() = AuroraWindow(
@@ -61,11 +59,11 @@ fun main() = AuroraWindow(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxSize().auroraBackground()
     ) {
-        AuroraCommandButton(
-            command = Command(
+        CommandButtonProjection(
+            contentModel = Command(
                 text = text,
                 action = { text = "Hello, Desktop!" }
             )
-        )
+        ).project()
     }
 }
