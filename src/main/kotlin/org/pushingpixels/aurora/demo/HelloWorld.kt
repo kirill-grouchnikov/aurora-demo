@@ -49,7 +49,7 @@ import org.pushingpixels.aurora.window.AuroraWindow
 fun main() = AuroraWindow(
     skin = marinerSkin(),
     title = "Aurora Demo",
-    size = IntSize(200, 150),
+    size = IntSize(220, 150),
     undecorated = true
 ) {
     var text by remember { mutableStateOf("Hello, World!") }

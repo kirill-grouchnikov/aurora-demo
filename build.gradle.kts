@@ -31,7 +31,7 @@ tasks.withType<KotlinCompile>() {
 
 compose.desktop {
     application {
-        mainClass = "org.pushingpixels.aurora.demo.HelloSwingKt"
+        mainClass = "org.pushingpixels.aurora.demo.HelloWorldKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "aurora-demo"
