@@ -46,7 +46,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.swing.Swing
 import org.pushingpixels.aurora.auroraBackground
 import org.pushingpixels.aurora.component.model.Command
-import org.pushingpixels.aurora.component.model.CommandButtonProjection
+import org.pushingpixels.aurora.component.projection.CommandButtonProjection
 import org.pushingpixels.aurora.skin.marinerSkin
 import org.pushingpixels.aurora.window.AuroraWindow
 import org.pushingpixels.substance.api.SubstanceCortex
