@@ -30,16 +30,18 @@
 
 package org.pushingpixels.aurora.demo
 
-import androidx.compose.desktop.SwingPanel
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.awt.SwingPanel
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -55,15 +57,22 @@ import java.awt.FlowLayout
 import javax.swing.JButton
 import javax.swing.JPanel
 
-fun main() {
-    GlobalScope.launch(Dispatchers.Swing) {
-        SubstanceCortex.GlobalScope.setSkin(MarinerSkin())
-    }
+@OptIn(ExperimentalFoundationApi::class, ExperimentalComposeUiApi::class)
+fun main() = application {
+    SubstanceCortex.GlobalScope.setSkin(MarinerSkin())
+
+    val state = rememberWindowState(
+        placement = WindowPlacement.Floating,
+        position = WindowPosition.Aligned(Alignment.Center),
+        size = WindowSize(220.dp, 150.dp)
+    )
+
     AuroraWindow(
         skin = marinerSkin(),
         title = "Aurora Demo",
-        size = IntSize(200, 150),
-        undecorated = true
+        state = state,
+        undecorated = true,
+        onCloseRequest = ::exitApplication
     ) {
         var text by remember { mutableStateOf("Hello, World!") }
 
