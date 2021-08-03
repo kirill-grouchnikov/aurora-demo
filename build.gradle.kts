@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.5.21"
-    id("org.jetbrains.compose") version "0.5.0-build270"
+    id("org.jetbrains.compose") version "1.0.0-alpha1-rc3"
 }
 
 group = "org.pushing-pixels.aurora.demo"
@@ -12,20 +12,21 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
+    google()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
     maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-skin:0.0.44-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-icon-icon:0.0.44-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-component:0.0.44-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-window:0.0.44-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-skin:0.0.45-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-icon-icon:0.0.45-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-component:0.0.45-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-window:0.0.45-SNAPSHOT")
     implementation(compose.desktop.currentOs)
     implementation("org.pushing-pixels:radiance-substance:4.5-SNAPSHOT")
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }
 
