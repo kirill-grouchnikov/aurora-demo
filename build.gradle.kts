@@ -18,9 +18,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-skin:0.0.48-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-component:0.0.48-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-window:0.0.48-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-skin:0.0.49-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-component:0.0.49-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-window:0.0.49-SNAPSHOT")
     implementation(compose.desktop.currentOs)
     implementation("org.pushing-pixels:radiance-substance:4.5-SNAPSHOT")
 }
