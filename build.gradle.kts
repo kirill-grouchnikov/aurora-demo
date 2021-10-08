@@ -3,8 +3,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.5.30"
-    id("org.jetbrains.compose") version "1.0.0-alpha4-build348"
+    kotlin("jvm") version "1.5.31"
+    id("org.jetbrains.compose") version "1.0.0-alpha4-build396"
 }
 
 group = "org.pushing-pixels.aurora.demo"
@@ -18,11 +18,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-skin:0.0.53-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-component:0.0.53-SNAPSHOT")
-    implementation("org.pushing-pixels:aurora-window:0.0.53-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-skin:0.0.55-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-component:0.0.55-SNAPSHOT")
+    implementation("org.pushing-pixels:aurora-window:0.0.55-SNAPSHOT")
     implementation(compose.desktop.currentOs)
-    implementation("org.pushing-pixels:radiance-substance:4.5-SNAPSHOT")
+    implementation("org.pushing-pixels:radiance-substance:4.5.0")
 }
 
 tasks.withType<KotlinCompile> {
