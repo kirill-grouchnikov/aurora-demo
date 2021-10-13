@@ -37,6 +37,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.awt.SwingPanel
+import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.*
 import org.pushingpixels.aurora.component.model.Command
@@ -56,7 +57,7 @@ fun main() = application {
     val state = rememberWindowState(
         placement = WindowPlacement.Floating,
         position = WindowPosition.Aligned(Alignment.Center),
-        size = WindowSize(220.dp, 150.dp)
+        size = DpSize(220.dp, 150.dp)
     )
 
     AuroraWindow(
