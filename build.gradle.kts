@@ -22,7 +22,7 @@ dependencies {
     implementation("org.pushing-pixels:aurora-component:0.0.57-SNAPSHOT")
     implementation("org.pushing-pixels:aurora-window:0.0.57-SNAPSHOT")
     implementation(compose.desktop.currentOs)
-    implementation("org.pushing-pixels:radiance-substance:4.5.0")
+    implementation("org.pushing-pixels:radiance-theming:5.0-SNAPSHOT")
 }
 
 tasks.withType<KotlinCompile> {
