@@ -42,8 +42,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.*
 import org.pushingpixels.aurora.component.model.Command
 import org.pushingpixels.aurora.component.projection.CommandButtonProjection
-import org.pushingpixels.aurora.skin.auroraBackground
-import org.pushingpixels.aurora.skin.marinerSkin
+import org.pushingpixels.aurora.theming.auroraBackground
+import org.pushingpixels.aurora.theming.marinerSkin
 import org.pushingpixels.aurora.window.AuroraWindow
 import org.pushingpixels.substance.api.SubstanceCortex
 import org.pushingpixels.substance.api.skin.MarinerSkin
