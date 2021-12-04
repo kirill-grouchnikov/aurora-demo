@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.5.31"
-    id("org.jetbrains.compose") version "1.0.0-rc6"
+    id("org.jetbrains.compose") version "1.0.0"
 }
 
 group = "org.pushing-pixels.aurora.demo"
@@ -17,9 +17,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-theming:1.0.0-beta3")
-    implementation("org.pushing-pixels:aurora-component:1.0.0-beta3")
-    implementation("org.pushing-pixels:aurora-window:1.0.0-beta3")
+    implementation("org.pushing-pixels:aurora-theming:1.0.0-rc1")
+    implementation("org.pushing-pixels:aurora-component:1.0.0-rc1")
+    implementation("org.pushing-pixels:aurora-window:1.0.0-rc1")
     implementation(compose.desktop.currentOs)
     implementation("org.pushing-pixels:radiance-theming:5.0.0")
 }
