@@ -85,7 +85,7 @@ fun main() = auroraApplication {
                 ).project()
             }
 
-            // This is Swing content rendered by Substance look-and-feel
+            // This is Swing content rendered by Radiance look-and-feel
             SwingPanel(
                 modifier = Modifier.fillMaxWidth().height(90.dp),
                 factory = {

@@ -12,14 +12,13 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
-    google()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-theming:1.0.0-rc2")
-    implementation("org.pushing-pixels:aurora-component:1.0.0-rc2")
-    implementation("org.pushing-pixels:aurora-window:1.0.0-rc2")
+    implementation("org.pushing-pixels:aurora-theming:1.0.1")
+    implementation("org.pushing-pixels:aurora-component:1.0.1")
+    implementation("org.pushing-pixels:aurora-window:1.0.1")
     implementation(compose.desktop.currentOs)
     implementation("org.pushing-pixels:radiance-theming:5.0.0")
 }
