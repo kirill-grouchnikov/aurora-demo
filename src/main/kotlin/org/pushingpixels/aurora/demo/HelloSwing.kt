@@ -45,6 +45,7 @@ import org.pushingpixels.aurora.component.projection.CommandButtonProjection
 import org.pushingpixels.aurora.theming.auroraBackground
 import org.pushingpixels.aurora.theming.marinerSkin
 import org.pushingpixels.aurora.window.AuroraWindow
+import org.pushingpixels.aurora.window.AuroraWindowTitlePaneConfigurations
 import org.pushingpixels.aurora.window.auroraApplication
 import org.pushingpixels.radiance.theming.api.RadianceThemingCortex
 import org.pushingpixels.radiance.theming.api.skin.MarinerSkin
@@ -65,7 +66,7 @@ fun main() = auroraApplication {
         skin = marinerSkin(),
         title = "Aurora Demo",
         state = state,
-        undecorated = true,
+        windowTitlePaneConfiguration = AuroraWindowTitlePaneConfigurations.AuroraPlain(),
         onCloseRequest = ::exitApplication
     ) {
         var text by remember { mutableStateOf("Hello, World!") }

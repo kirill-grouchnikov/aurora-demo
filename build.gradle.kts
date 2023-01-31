@@ -3,8 +3,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.10"
-    id("org.jetbrains.compose") version "1.1.0"
+    kotlin("jvm") version "1.8.0"
+    id("org.jetbrains.compose") version "1.3.0"
 }
 
 group = "org.pushing-pixels.aurora.demo"
@@ -13,14 +13,22 @@ version = "1.0.0"
 repositories {
     mavenCentral()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+    maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
 }
 
 dependencies {
-    implementation("org.pushing-pixels:aurora-theming:1.1.0")
-    implementation("org.pushing-pixels:aurora-component:1.1.0")
-    implementation("org.pushing-pixels:aurora-window:1.1.0")
     implementation(compose.desktop.currentOs)
-    implementation("org.pushing-pixels:radiance-theming:5.0.0")
+    implementation(libs.aurora.theming)
+    implementation(libs.aurora.component)
+    implementation(libs.aurora.window)
+    implementation(libs.radiance.theming)
+}
+
+configurations {
+    all {
+        exclude(group = "org.jetbrains.compose.material", module = "material")
+        exclude(group = "org.jetbrains.compose.material3", module = "material3")
+    }
 }
 
 tasks.withType<KotlinCompile> {
