@@ -3,7 +3,6 @@ kotlin = "2.1.20"
 compose = "1.8.0"
 aurora = "2.0-SNAPSHOT"
 radiance = "8.5-SNAPSHOT"
-versionchecker = "0.52.0"
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
@@ -17,4 +16,3 @@ aurora-component = { module = "org.pushing-pixels:aurora-component", version.ref
 aurora-window = { module = "org.pushing-pixels:aurora-window", version.ref = "aurora" }
 aurora-svgtranscoder-gradlePlugin = { module = "org.pushing-pixels:aurora-tools-svg-transcoder-gradle-plugin", version.ref = "aurora" }
 radiance-theming = { module = "org.pushing-pixels:radiance-theming", version.ref = "radiance" }
-versionchecker-gradlePlugin = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "versionchecker" }
