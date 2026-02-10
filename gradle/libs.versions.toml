@@ -1,6 +1,6 @@
 [versions]
-kotlin = "2.2.20"
-compose = "1.9.2"
+kotlin = "2.3.10"
+compose = "1.10.1"
 aurora = "2.0.0"
 radiance = "8.5.0"
 
@@ -14,5 +14,4 @@ kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 aurora-theming = { module = "org.pushing-pixels:aurora-theming", version.ref = "aurora" }
 aurora-component = { module = "org.pushing-pixels:aurora-component", version.ref = "aurora" }
 aurora-window = { module = "org.pushing-pixels:aurora-window", version.ref = "aurora" }
-aurora-svgtranscoder-gradlePlugin = { module = "org.pushing-pixels:aurora-tools-svg-transcoder-gradle-plugin", version.ref = "aurora" }
 radiance-theming = { module = "org.pushing-pixels:radiance-theming", version.ref = "radiance" }

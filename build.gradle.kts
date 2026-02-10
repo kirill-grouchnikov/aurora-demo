@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("multiplatform") version "2.2.20"
+    kotlin("multiplatform") version "2.3.10"
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
 }
@@ -16,7 +16,7 @@ buildscript {
         google()
         mavenCentral()
         maven { url = uri("https://plugins.gradle.org/m2/") }
-        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+        maven { url = uri("https://packages.jetbrains.team/maven/p/cmp/dev/") }
         maven { url = uri("https://central.sonatype.com/repository/maven-snapshots/") }
     }
 
@@ -33,7 +33,7 @@ buildscript {
 repositories {
     google()
     mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    maven("https://packages.jetbrains.team/maven/p/cmp/dev/")
     maven("https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev")
     maven("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven")
     maven("https://central.sonatype.com/repository/maven-snapshots/")
