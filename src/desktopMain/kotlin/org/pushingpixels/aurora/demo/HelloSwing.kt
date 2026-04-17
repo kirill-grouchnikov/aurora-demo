@@ -39,9 +39,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.awt.SwingPanel
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.*
+import androidx.compose.ui.window.WindowPlacement
+import androidx.compose.ui.window.WindowPosition
+import androidx.compose.ui.window.rememberWindowState
 import org.pushingpixels.aurora.component.model.Command
 import org.pushingpixels.aurora.component.projection.CommandButtonProjection
+import org.pushingpixels.aurora.theming.AuroraSkin
+import org.pushingpixels.aurora.theming.DecorationAreaType
 import org.pushingpixels.aurora.theming.auroraBackground
 import org.pushingpixels.aurora.theming.marinerSkin
 import org.pushingpixels.aurora.window.AuroraWindow
@@ -86,8 +90,12 @@ fun main() = auroraApplication {
                 ).project()
             }
 
-            // This is Swing content rendered by Radiance look-and-feel
+            // This is Swing content rendered by Radiance look-and-feel. However, as it is wrapped in
+            // the SwingPanel composable that "forwards" its background color down to the Compose-Swing
+            // interop view, we need to explicitly set the swing panel background to match the Aurora
+            // background.
             SwingPanel(
+                background = AuroraSkin.colors.getNeutralContainerTokens(DecorationAreaType.None).containerSurface,
                 modifier = Modifier.fillMaxWidth().height(90.dp),
                 factory = {
                     JPanel().apply {
