@@ -1,17 +1,21 @@
 [versions]
-kotlin = "2.3.20"
-compose = "1.11.0-beta02"
-aurora = "2.5-SNAPSHOT"
-radiance = "9.0-SNAPSHOT"
+kotlin = "2.4.0"
+compose = "1.11.1"
+aurora = "2.5.0"
+radiance = "9.0.0"
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 [libraries]
-compose-desktop = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
+compose-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 aurora-theming = { module = "org.pushing-pixels:aurora-theming", version.ref = "aurora" }
 aurora-component = { module = "org.pushing-pixels:aurora-component", version.ref = "aurora" }
 aurora-window = { module = "org.pushing-pixels:aurora-window", version.ref = "aurora" }
 radiance-theming = { module = "org.pushing-pixels:radiance-theming", version.ref = "radiance" }
+
+compose-desktop = { module = "org.jetbrains.compose.desktop:desktop", version.ref = "compose" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }

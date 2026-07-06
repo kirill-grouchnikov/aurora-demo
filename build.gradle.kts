@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("multiplatform") version "2.3.20"
+    kotlin("multiplatform") version "2.4.0"
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
 }
@@ -21,7 +21,7 @@ buildscript {
     }
 
     dependencies {
-        classpath(libs.compose.desktop)
+        classpath(libs.compose.gradlePlugin)
         classpath(libs.kotlin.gradlePlugin)
         classpath(libs.aurora.theming)
         classpath(libs.aurora.component)
@@ -59,9 +59,8 @@ kotlin {
     sourceSets {
         named("desktopMain") {
             dependencies {
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.desktop.common)
+                api(libs.compose.runtime)
+                api(libs.compose.foundation)
                 api(compose.desktop.currentOs)
                 api(libs.radiance.theming)
                 api(libs.aurora.component)
